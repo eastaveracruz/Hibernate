@@ -1113,30 +1113,74 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="280" parent="3" name="books"/>
-    <column id="281" parent="280" name="id">
+    <table id="280" parent="3" name="avalable"/>
+    <table id="281" parent="3" name="booksentity"/>
+    <table id="282" parent="3" name="price"/>
+    <column id="283" parent="280" name="avalable">
+      <Position>1</Position>
+      <DataType>bit(1)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="284" parent="280" name="id">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="285" parent="280" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="286" parent="280" name="FK_467ruvsrxwn83673s59hkvkvy">
+      <ColNames>id</ColNames>
+      <RefSchemaName>lessons</RefSchemaName>
+      <RefTableName>booksentity</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="287" parent="281" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="282" parent="280" name="date">
+    <column id="288" parent="281" name="date">
       <Position>2</Position>
       <DataType>datetime|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="280" name="title">
+    <column id="289" parent="281" name="title">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="284" parent="280" name="PRIMARY">
+    <key id="290" parent="281" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+    <column id="291" parent="282" name="cost">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="292" parent="282" name="id">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="293" parent="282" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="294" parent="282" name="FK_5tuwl4xpt9a2d0fgonobla9am">
+      <ColNames>id</ColNames>
+      <RefSchemaName>lessons</RefSchemaName>
+      <RefTableName>booksentity</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>

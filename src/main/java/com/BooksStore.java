@@ -17,7 +17,7 @@ public class BooksStore {
 
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 
-        entityManager.persist(new BooksEntity("hell323", timestamp));
+        entityManager.persist(new BooksEntity("hell323", timestamp, 123));
         transaction.commit();
 
 
